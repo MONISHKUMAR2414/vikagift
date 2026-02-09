@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("back2.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* 🔒 NOT MOVABLE */
+
+    overflow-x: hidden;
+}
+
+/* ---------- SECTIONS ---------- */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.intro {
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+/* ---------- TEXT ---------- */
+h1 {
+    font-size: 42px;
+    color: #880e4f;
+}
+
+h2 {
+    font-size: 34px;
+    color: #c2185b;
+}
+
+.final-text {
+    max-width: 900px;
+    margin: 80px auto;
+    font-size: 26px;
+    color: #880e4f;
+    line-height: 1.6;
+}
+
+/* ---------- MEMORY IMAGES ---------- */
+.memories img {
+    width: 240px;
+    margin: 20px;
+    border-radius: 20px;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: filter 0.6s ease, transform 0.6s ease, opacity 0.6s ease;
+}
+
+.memories img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+/* ---------- TURNING IMAGE ---------- */
+.center-img {
+    width: 280px;
+    border-radius: 30px;
+    margin-top: 30px;
+    box-shadow: 0 20px 50px rgba(255,20,147,0.4);
+}
+
+/* ---------- COLLAGE ---------- */
+.collage {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    perspective: 1200px;
+}
+
+.collage img {
+    width: 220px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: transform 0.6s, box-shadow 0.6s;
+}
+
+.collage img:hover {
+    transform: rotateY(20deg) rotateX(10deg) scale(1.12);
+    box-shadow: 0 35px 70px rgba(255,20,147,0.6);
+}
+
+/* ---------- VIDEOS ---------- */
+.videos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 70px;
+}
+
+.videos video {
+    width: 280px;
+    border-radius: 22px;
+    cursor: pointer;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.videos video:hover {
+    transform: scale(1.2);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.45);
+}
+
+/* ---------- SCROLL REVEAL ---------- */
+.reveal {
+    opacity: 0;
+    transform: translateY(80px) scale(0.95);
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* ---------- HEARTS ---------- */
+.heart {
+    position: fixed;
+    bottom: -30px;
+    animation: floatUp linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(-110vh);
+        opacity: 0.6;
+    }
+}

@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: 
+        linear-gradient(rgba(255,192,203,0.7), rgba(255,255,255,0.7)),
+        url("https://i.imgur.com/8zQZ6nF.jpg"); /* pink roses */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Comic Sans MS', cursive;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    margin-top: 150px;
+}
+
+h1 {
+    font-size: 50px;
+    color: #d63384;
+    text-shadow: 2px 2px white;
+}
+
+.buttons {
+    margin-top: 40px;
+}
+
+button {
+    padding: 15px 40px;
+    font-size: 22px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+}
+
+#yesBtn {
+    background-color: #ff69b4;
+    color: white;
+}
+
+#noBtn {
+    background-color: white;
+    color: #ff1493;
+    position: absolute;
+}
